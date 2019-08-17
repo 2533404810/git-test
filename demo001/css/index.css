@@ -1,0 +1,174 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+
+/*
+ 
+ * nav
+ * 
+ * */
+
+.nav {
+	width: 1200px;
+	margin: 0 auto;
+	height: 50px;
+}
+
+.nav ul {
+	height: 100%;
+	display: flex;
+}
+
+.nav li {
+	height: 100%;
+}
+
+.nav a {
+	position: relative;
+	color: black;
+	display: inline-block;
+	height: 50px;
+	line-height: 50px;
+	padding: 0 20px;
+	text-align: center;
+}
+
+.nav a::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	border-bottom: 2px solid red;
+	transition: all 0.2s linear;
+}
+
+.nav a:hover::before {
+	width: 100%;
+}
+
+.nav a:hover {
+	transition: all 0.01s linear 0.2s;
+	color: red;
+}
+
+
+/**
+ * 动画
+ * */
+
+.dong{
+	margin: 100px auto;
+	width: 150px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	color: white;
+	background: blue;
+	/*执行一个动画 时间为一秒 循环次数为无限*/
+	animation:yihao 5000ms infinite ;
+	border-radius: 5px;
+}
+
+/*定义一个动画*/
+@keyframes yihao{
+	from{width: 150px;background: blue;}
+	to{width: 200px;background: red;}
+}
+
+
+ 
+/**
+ * logo
+ * */
+
+.jitter {
+  position: relative;
+  width: 200px;
+  margin: 100px auto;
+  border: 1px solid blue;
+}
+
+/*第一部分*/
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 47px;
+  height: 270px;
+  z-index: 1;
+  background: #24f6f0;
+} 
+
+.logo::before{
+	content: "";
+	position: absolute;
+	top: -140px;
+	right:-247px;
+	width:200px;
+	height: 200px;
+	border: solid #24F6F0 47px;
+	border-top: solid 47px transparent;
+	border-left: solid 47px transparent;
+	border-bottom: solid 47px transparent;
+	border-radius: 100%;
+	transform: rotate(-220deg);
+}
+
+.logo::after{
+	content: "";
+	position: absolute;
+	top: 140px;
+	right:0;
+	width:150px;
+	height: 150px;
+	border: solid #24F6F0 47px;
+	border-top: solid 47px transparent; 
+	border-radius: 100%;
+	transform: rotate(400deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
